@@ -11,14 +11,16 @@ public class Patient implements Serializable{
     
     private String firstName = new String();
     private String lastName  = new String();
-    private String username  = new String();
-    private String password  = new String();
+    private String status = new String();
+    //private String username  = new String();
+    //private String password  = new String();
     
-    public Patient(String newFirstName, String newLastName, String newUsername, String newPassword){
+    public Patient(String newFirstName, String newLastName, String newStatus){
         firstName = newFirstName;
         lastName = newLastName;
-        username = newUsername;
-        password = newPassword;
+        status = newStatus;
+       // username = newUsername;
+        //password = newPassword;
     }
     
     
@@ -37,13 +39,21 @@ public class Patient implements Serializable{
     public void setLastName(String newLastName) {
         lastName = newLastName;
     }
-    
+    /*
     public String getUsername() {
         return username;
     }
     
     public void setusername(String newUsername) {
         username = newUsername;
+    }
+*/
+    public String getStatus() {
+        return status;
+    }
+    
+    public void setStatus(String newStatus){
+        status = newStatus;
     }
 
 }

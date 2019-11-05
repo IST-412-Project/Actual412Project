@@ -14,14 +14,14 @@ public class NavigationUICntl {
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         NavigationCntl.getNavigationCntl(theStage).exit();
     }
-   /* 
+   
     @FXML protected void handleUsersButtonAction(ActionEvent event) {
         actiontarget.setText("Users button pressed");
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         theStage.hide();
         NavigationCntl.getNavigationCntl(theStage).getUserCntl(theStage);
     }
-    
+    /*
     @FXML protected void handleUC2ButtonAction(ActionEvent event) {
         actiontarget.setText("UC2 button pressed");
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
