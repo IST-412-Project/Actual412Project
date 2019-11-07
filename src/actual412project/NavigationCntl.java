@@ -29,9 +29,11 @@ public class NavigationCntl {
 
     public static NavigationCntl getNavigationCntl(Stage theStage) {
         if (theNavigationCntl != null) {
+            System.out.println("nav cntl" + theNavigationCntl);
             return theNavigationCntl;
         } else {
             theNavigationCntl = new NavigationCntl(theStage);
+            System.out.println("nav stage works");
             return theNavigationCntl;
         }
     }
@@ -48,13 +50,15 @@ public class NavigationCntl {
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
+            
         }
     }
-/*
-    public void getPatientRecord(Stage theStage) {
+    
+    public void getPatientCntl(Stage theStage) {
+        System.out.println("patient cntl");
         PatientCntl.getPatientCntl(theStage);
     }
-*/
+
     public void exit() {
         System.exit(0);
     }

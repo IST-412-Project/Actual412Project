@@ -8,47 +8,17 @@ import javafx.stage.Stage;
 public class NavigationUICntl {
     @FXML private Text actiontarget;
     
-    
     @FXML protected void handleExitButtonAction(ActionEvent event) {
-        actiontarget.setText("Exit button pressed");
+        //actiontarget.setText("Exit button pressed");
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         NavigationCntl.getNavigationCntl(theStage).exit();
     }
    
-    @FXML protected void handleUsersButtonAction(ActionEvent event) {
-        actiontarget.setText("Users button pressed");
+    @FXML protected void handlePatientButtonAction(ActionEvent event) {
+        System.out.println("test");
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         theStage.hide();
-        NavigationCntl.getNavigationCntl(theStage).getUserCntl(theStage);
+        NavigationCntl.getNavigationCntl(theStage).getPatientCntl(theStage);
+        System.out.println("getting to stage" + theStage);
     }
-    /*
-    @FXML protected void handleUC2ButtonAction(ActionEvent event) {
-        actiontarget.setText("UC2 button pressed");
-        Stage theStage = (Stage) actiontarget.getScene().getWindow();
-        theStage.hide();
-       NavigationCntl.getNavigationCntl(theStage).getSetReminderCtrl(theStage);
-    }
-    
-    @FXML protected void handleUC3ButtonAction(ActionEvent event) {
-        actiontarget.setText("UC3 button pressed");
-        Stage theStage = (Stage) actiontarget.getScene().getWindow();
-        theStage.hide();
-        NavigationCntl.getNavigationCntl(theStage).getLogActivityCntl(theStage);
-    
-    }
-        
-    @FXML protected void handleUC4ButtonAction(ActionEvent event) {
-        actiontarget.setText("UC4 button pressed");
-        Stage theStage = (Stage) actiontarget.getScene().getWindow();
-        theStage.hide();
-        NavigationCntl.getNavigationCntl(theStage).getCostSharingCntl(theStage);
-    }  
-    
-    @FXML protected void handleUC5ButtonAction(ActionEvent event) {
-        actiontarget.setText("UC5 button pressed");
-        Stage theStage = (Stage) actiontarget.getScene().getWindow();
-        theStage.hide();
-        NavigationCntl.getNavigationCntl(theStage).getTrackResourceUseCntl(theStage);
-    } 
-*/
 }

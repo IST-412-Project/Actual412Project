@@ -21,13 +21,13 @@ public class LoginCntl {
     }
     
     @FXML protected void handleSubmitButtonAction(ActionEvent event) {
-        actiontarget.setText("Sign in button pressed");
+        //actiontarget.setText("Sign in button pressed");
         String un = usernameField.getText();
         String pw = passwordField.getText();
         if(authenticate(un, pw)){
             Stage stage = (Stage) actiontarget.getScene().getWindow();
             stage.hide();
-            //NavigationCntl theNavigationCntl = NavigationCntl.getNavigationCntl(stage);
+            NavigationCntl theNavigationCntl = NavigationCntl.getNavigationCntl(stage);
         }else{
             usernameField.setText("");
             passwordField.setText("");

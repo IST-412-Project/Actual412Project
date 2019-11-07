@@ -9,51 +9,40 @@ import java.io.*;
 
 public class Patient implements Serializable{
     
-    private String firstName = new String();
-    private String lastName  = new String();
-    private String status = new String();
-    //private String username  = new String();
-    //private String password  = new String();
+    private String first = new String();
+    private String last  = new String();
+    private String record = new String();
+
     
-    public Patient(String newFirstName, String newLastName, String newStatus){
-        firstName = newFirstName;
-        lastName = newLastName;
-        status = newStatus;
-       // username = newUsername;
-        //password = newPassword;
+    public Patient(String newFirstName, String newLastName, String newRecord){
+        first = newFirstName;
+        last = newLastName;
+        record = newRecord;
     }
     
     
     public String getFirstName() {
-        return firstName;
+        return first;
     }
     
     public void setFirstName(String newFirstName) {
-        firstName = newFirstName;
+        first = newFirstName;
     }
         
     public String getLastName() {
-        return lastName;
+        return last;
     }
     
     public void setLastName(String newLastName) {
-        lastName = newLastName;
+        last = newLastName;
     }
-    /*
-    public String getUsername() {
-        return username;
-    }
-    
-    public void setusername(String newUsername) {
-        username = newUsername;
-    }
-*/
-    public String getStatus() {
-        return status;
+
+    public String getRecord() {
+        return record;
     }
     
-    public void setStatus(String newStatus){
-        status = newStatus;
+    public void setRecord(String newRecord){
+        record = newRecord;
     }
 
 }

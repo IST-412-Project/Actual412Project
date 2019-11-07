@@ -1,5 +1,7 @@
 /*
-Patient Cntl
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package actual412project;
 
@@ -10,54 +12,57 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.collections.ObservableList;
 
-
 public class PatientCntl {
-    
-    @FXML private Stage stage;
+
+    @FXML
+    private Stage stage;
     private static PatientCntl thePatientCntl;
-    private ObservableList<Patient> theListOfPatients;
-    
-    private PatientCntl(Stage theExistingStage){
-        theListOfPatients = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getPatientList().getPatientData();
+    private ObservableList<Patient> patientList;
+
+    private PatientCntl(Stage theExistingStage) {
+        patientList = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getPatientList().getPatientData();
+        System.out.println("patient list:" + patientList);
         stage = theExistingStage;
-        this.setUpUserListScene();
+        this.setUpPatientScene();
         stage.show();
+        System.out.println(stage);
     }
-    
-    public static PatientCntl getPatientCntl(Stage theStage){
-        if(thePatientCntl != null){
+
+    public static PatientCntl getPatientCntl(Stage theStage) {
+        
+        if (thePatientCntl != null) {
+            System.out.println("if patient");
             return thePatientCntl;
-        }else{
+        } else {
+            System.out.println("else patient");
             thePatientCntl = new PatientCntl(theStage);
+            System.out.println("after patient cntl called");
             return thePatientCntl;
         }
     }
-    
-    @FXML public void setUpPatientListScene(){
+
+    @FXML
+    public void setUpPatientScene() {
         Parent root;
         Scene scene;
-        try{
+        try {
             root = FXMLLoader.load(getClass().getResource("PatientUI.fxml"));
             scene = new Scene(root);
-            stage.setTitle("Patient Records");
+            stage.setTitle("Patients");
             stage.setScene(scene);
             stage.show();
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
     
-    public void addUserRow(Patient newPatient){
-        PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getuserList().getUserData().add(newPatient);
-        PersistentDataCntl.getPersistentDataCntl().writeSerializedDataModel();
+    public ObservableList<Patient> getListOfPatients() {
+        return patientList;
     }
     
-    public ObservableList<Patient> getListOfPatients(){
-        return theListOfPatients;
+    public void exit(){
+        System.exit(0);
     }
-    
-    public Stage getStage(){
-        return stage;
-    }
+
     
 }
