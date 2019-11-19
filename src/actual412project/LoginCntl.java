@@ -37,9 +37,10 @@ public class LoginCntl {
     
     public boolean authenticate(String username, String password){
         boolean authenticated = false;
-        if(username.equals("good")&& password.equals("user")){
+        if((username.equals("user1")&& password.equals("test1")) || (username.equals("user2")&& password.equals("test2"))){
             authenticated = true;
-        }else{
+        }
+        else{
             authenticated = false;
         }
         return authenticated;

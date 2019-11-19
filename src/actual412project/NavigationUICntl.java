@@ -21,4 +21,11 @@ public class NavigationUICntl {
         NavigationCntl.getNavigationCntl(theStage).getPatientCntl(theStage);
         System.out.println("getting to stage" + theStage);
     }
+    @FXML protected void handleEmergencyButtonAction(ActionEvent event) {
+        System.out.println("emergency btn pressed");
+        Stage theStage = (Stage) actiontarget.getScene().getWindow();
+        theStage.hide();
+        NavigationCntl.getNavigationCntl(theStage).getEmergencyCntl(theStage);
+        System.out.println("getting to stage" + theStage);
+    }
 }

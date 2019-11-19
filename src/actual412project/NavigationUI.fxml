@@ -11,11 +11,13 @@
     <padding><Insets bottom="10" left="25" right="25" top="25" /></padding>
     
     <Button onAction="#handlePatientButtonAction" prefHeight="50.0" prefWidth="120.0" text="Patients" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-    
-    <Button onAction="#handleExitButtonAction" prefHeight="50.0" prefWidth="180.0" text="Exit" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Button onAction="#handleEmergencyButtonAction" prefHeight="50.0" prefWidth="181.0" text="Emergency Notification" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <Button onAction="#handleExitButtonAction" prefHeight="50.0" prefWidth="180.0" text="Exit" GridPane.columnIndex="2" GridPane.rowIndex="3" />
 
     <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
    <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
    </columnConstraints>

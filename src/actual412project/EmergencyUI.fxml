@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="actual412project.EmergencyUICntl">
+   <children>
+      <BorderPane layoutX="65.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" />
+      <TitledPane animated="false" prefHeight="400.0" prefWidth="601.0" text="Emergency Notification">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="emergencyButton" layoutX="453.0" layoutY="173.0" mnemonicParsing="false" onAction="#Confirmation" text="Submit Emergency" />
+                  <TextField fx:id ="textInput" layoutX="16.0" layoutY="40.0" prefHeight="88.0" prefWidth="568.0" />
+                  <Label layoutX="14.0" layoutY="128.0" prefHeight="33.0" prefWidth="500.0" text="Submitting an Emergency Notification will notify medical personnel and government officials " />
+                  <Label layoutX="14.0" layoutY="153.0" prefHeight="33.0" prefWidth="120.0" text="of your emergency." />
+                  <Button layoutX="376.0" layoutY="173.0" mnemonicParsing="false" text="Cancel" />
+                  <TextField fx:id="success" layoutX="193.0" layoutY="251.0" prefHeight="43.0" prefWidth="225.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

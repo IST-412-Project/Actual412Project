@@ -58,6 +58,11 @@ public class NavigationCntl {
         System.out.println("patient cntl");
         PatientCntl.getPatientCntl(theStage);
     }
+    
+    public void getEmergencyCntl(Stage theStage) {
+        System.out.println("emergency cntl");
+        EmergencyCntl.getEmergencyCntl(theStage);
+    }
 
     public void exit() {
         System.exit(0);
