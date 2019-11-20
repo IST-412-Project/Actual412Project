@@ -16,7 +16,7 @@
                     <columns>
                       <TableColumn id="first" fx:id="first" prefWidth="100.0" text="First Name" />
                       <TableColumn id="last" fx:id="last" prefWidth="100.0" text="Last Name" />
-                      <TableColumn id="record" fx:id="record" prefWidth="100.0" text="Patient Record" />
+                      <TableColumn id="record" fx:id="record" prefWidth="100.0" text="Patient Record" onEditCommit="#onRecordChanged" />
                     </columns>
                   </TableView>
             </children>

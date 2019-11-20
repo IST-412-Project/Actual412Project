@@ -5,12 +5,14 @@ import java.util.ResourceBundle;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 
 
@@ -45,6 +47,15 @@ public class PatientUICntl implements Initializable{
         for(i = 0; i < listOfPatients.size();i++){
            System.out.println("user name: "+ listOfPatients.get(i).getFirstName()); 
         }
+        
+        patientTable.setEditable(true);
+        record.setCellFactory(TextFieldTableCell.forTableColumn());
+        
+    }
+    
+    public void onRecordChanged(TableColumn.CellEditEvent<Patient,String> recordStringCellEditEvent){
+        Patient patient = patientTable.getSelectionModel().getSelectedItem();
+        patient.setRecord(recordStringCellEditEvent.getNewValue());
         
     }
     
